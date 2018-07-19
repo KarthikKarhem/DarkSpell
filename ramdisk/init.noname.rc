@@ -52,10 +52,33 @@ on property:sys.boot_completed=1
     chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
     chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1612800
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 39000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 95
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 902400
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 80000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/powersave_bias 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/screen_off_maxfreq 1113600
+
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1113600
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1804800
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 39000
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 95
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 19000 1401600:39000
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1401600
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 80000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/powersave_bias 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/screen_off_maxfreq 1401600
     
     exec u:r:init:s0 -- /init.special_power.sh
     exec u:r:su:s0 root root -- /init.special_power.sh
