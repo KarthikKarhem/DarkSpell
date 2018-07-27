@@ -11,7 +11,9 @@ function copy() {
     cat $1 > $2
 }
 ################################################################################
-
+if [ ! -f /data/property/persist.spectrum.profile ]; then
+    setprop persist.spectrum.profile 1
+fi
 {
 
 sleep 10
