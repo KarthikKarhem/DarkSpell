@@ -1,24 +1,24 @@
 <resources>
-    <string name="app_name">Spectrum</string>
+    <string name="app_name">DarkSpell</string>
 
     <!-- Profile Names -->
-    <string name="prof0">Balance</string>
+    <string name="prof0">Balanced</string>
     <string name="prof1">Stock</string>
     <string name="prof2">Battery</string>
     <string name="prof3">Gaming</string>
 
     <!-- Support Strings -->
-    <string name="no_spectrum_support_dialog_title">No Spectrum support detected</string>
-    <string name="no_spectrum_support_dialog_message">Please contact your kernel dev and ask them to add Spectrum support</string>
-    <string name="no_root_detected_dialog_title">No root detected</string>
-    <string name="no_root_detected_dialog_message">Root access was not found or denied. Spectrum needs root to set profiles.</string>
-    <string name="custom_descriptions_fail_text">Storage permission denied, Couldn\'t look for custom descriptions</string>
+    <string name="no_darkspell_support_dialog_title">No DarkSpell support detected!</string>
+    <string name="no_darkspell_support_dialog_message">DarkSpell won\'t work, untill you believe in DarkMagic!</string>
+    <string name="no_root_detected_dialog_title">No root detected!</string>
+    <string name="no_root_detected_dialog_message">Root access was not found or denied. DarkSpell needs root to set profiles.</string>
+    <string name="custom_descriptions_fail_text">Storage permission denied, Couldn\'t look for custom descriptions.</string>
   
     <!-- Default Profile Descriptions -->
-    <string name="profdesc0">The NoName kernel profile, known for its smooth performance in basic tasks while maintaining fantastic battery.</string>
-    <string name="profdesc1">Stock kernel profile with stock CPU frequencies.</string>
-    <string name="profdesc2">Ultra-conservative profile that lets performance take a hit in order to achieve long-lasting battery life.</string>
-    <string name="profdesc3">Need that extra 10 FPS? I gotchu.</string>
+    <string name="profdesc0">The DarkMagic kernel profile, known for its fluid performance and no drop in battery percentage during idling!</string>
+    <string name="profdesc1">Not-so-interesting stock kernel profile with stock CPU frequencies..</string>
+    <string name="profdesc2">Super-conservative profile that lets performance take a hit in order to achieve long-lasting battery life.</string>
+    <string name="profdesc3">Need that extra 10 FPS? Need not worry, I gotchu!</string>
 
     <!-- Profile Loader -->
     <string name="aboutLoader">Woah there!</string>

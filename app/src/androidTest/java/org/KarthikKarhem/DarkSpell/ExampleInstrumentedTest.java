@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.frap129.spectrum", appContext.getPackageName());
+        assertEquals("org.KarthikKarhem.DarkSpell", appContext.getPackageName());
     }
 }

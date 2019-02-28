@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.content.Context;
 import android.os.Environment;
@@ -25,9 +25,9 @@ class Utils {
 
     public static String  kpmFinal = "/proc/kpm_final";
 
-    public static String profileProp = "persist.spectrum.profile";
+    public static String profileProp = "persist.darkspell.profile";
 
-    public static String kernelProp = "persist.spectrum.kernel";
+    public static String kernelProp = "persist.darkspell.kernel";
 
     public static String kpmPropPath = "/proc/kpm_name";
 
@@ -42,7 +42,7 @@ class Utils {
     // Method to check if kernel supports
     public static boolean checkSupport(final Context context) {
         List<String> shResult;
-        String supportProp = "spectrum.support";
+        String supportProp = "darkspell.support";
         shResult = Shell.SH.run(String.format("getprop %s", supportProp));
         if(listToString(shResult).isEmpty()){
             shResult = Shell.SU.run(String.format("cat %s", kpmSupport));
@@ -101,7 +101,7 @@ class Utils {
     }
 
     public static String disabledProfiles(){
-        String disabledProfilesProp = "spectrum.disabledprofiles";
+        String disabledProfilesProp = "darkspell.disabledprofiles";
         if(KPM && kpmDisabledProfiles != null){
             return kpmDisabledProfiles;
         }
@@ -130,7 +130,7 @@ class Utils {
     }
 
     public static String getCustomDesc(String profileName) {
-        File customDescFile = new File(Environment.getExternalStorageDirectory() + File.separator +".spectrum_descriptions");
+        File customDescFile = new File(Environment.getExternalStorageDirectory() + File.separator +".darkspell_descriptions");
         String retVal = readString(customDescFile, profileName);
         if (retVal != null) {
             return retVal.split(":")[1];
@@ -140,6 +140,6 @@ class Utils {
     }
 
     public static boolean supportsCustomDesc(){
-        return new File(Environment.getExternalStorageDirectory() + File.separator +".spectrum_descriptions").exists();
+        return new File(Environment.getExternalStorageDirectory() + File.separator +".darkspell_descriptions").exists();
     }
 }

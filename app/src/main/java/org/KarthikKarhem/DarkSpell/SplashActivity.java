@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.app.Activity;
 import android.content.Intent;

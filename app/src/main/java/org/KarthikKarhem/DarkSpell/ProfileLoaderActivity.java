@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -134,7 +134,7 @@ public class ProfileLoaderActivity extends AppCompatActivity{
         new AsyncTask<Object, Object, Void>() {
             @Override
             protected Void doInBackground(Object... params) {
-                Shell.SU.run("setprop persist.spectrum.profile " + profile);
+                Shell.SU.run("setprop persist.darkspell.profile " + profile);
                 return null;
             }
         }.execute();

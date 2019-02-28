@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class ProfileTile extends TileService {
 
     private static final String SERVICE_STATUS_FLAG = "serviceStatus";
-    private static final String PREFERENCES_KEY = "org.frap129.spectrum";
+    private static final String PREFERENCES_KEY = "org.KarthikKarhem.DarkSpell";
     private boolean click = false;
 
     @Override
@@ -46,7 +46,7 @@ public class ProfileTile extends TileService {
             editor.apply();
         } else if (isActive && !click){
             Utils.setProfile(1);
-            editor.putString("profile", "performance");
+            editor.putString("profile", "stock");
             editor.apply();
         } else {
             Utils.setProfile(0);
@@ -87,12 +87,12 @@ public class ProfileTile extends TileService {
             newLabel = "Battery";
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.battery);
             click = true;
-        } else if (profile.contains("performance") && !disabledProfilesList.contains(profile)){
-            newLabel = "Performance";
+        } else if (profile.contains("stock") && !disabledProfilesList.contains(profile)){
+            newLabel = "Stock";
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.rocket);
             click = true;
         } else if (profile.contains("balanced") && !disabledProfilesList.contains(profile)) {
-            newLabel = "Balance";
+            newLabel = "Balanced";
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.atom);
             click = false;
         } else {

@@ -1,4 +1,4 @@
-package org.frap129.spectrum;
+package org.KarthikKarhem.DarkSpell;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -26,19 +26,19 @@ import java.util.Objects;
 
 import eu.chainfire.libsuperuser.Shell;
 
-import static org.frap129.spectrum.Utils.KPM;
-import static org.frap129.spectrum.Utils.checkSupport;
-import static org.frap129.spectrum.Utils.cpuScalingGovernorPath;
-import static org.frap129.spectrum.Utils.finalGov;
-import static org.frap129.spectrum.Utils.getCustomDesc;
-import static org.frap129.spectrum.Utils.kernelProp;
-import static org.frap129.spectrum.Utils.kpmFinal;
-import static org.frap129.spectrum.Utils.kpmPath;
-import static org.frap129.spectrum.Utils.kpmPropPath;
-import static org.frap129.spectrum.Utils.listToString;
-import static org.frap129.spectrum.Utils.notTunedGov;
-import static org.frap129.spectrum.Utils.profileProp;
-import static org.frap129.spectrum.Utils.setProfile;
+import static org.KarthikKarhem.DarkSpell.Utils.KPM;
+import static org.KarthikKarhem.DarkSpell.Utils.checkSupport;
+import static org.KarthikKarhem.DarkSpell.Utils.cpuScalingGovernorPath;
+import static org.KarthikKarhem.DarkSpell.Utils.finalGov;
+import static org.KarthikKarhem.DarkSpell.Utils.getCustomDesc;
+import static org.KarthikKarhem.DarkSpell.Utils.kernelProp;
+import static org.KarthikKarhem.DarkSpell.Utils.kpmFinal;
+import static org.KarthikKarhem.DarkSpell.Utils.kpmPath;
+import static org.KarthikKarhem.DarkSpell.Utils.kpmPropPath;
+import static org.KarthikKarhem.DarkSpell.Utils.listToString;
+import static org.KarthikKarhem.DarkSpell.Utils.notTunedGov;
+import static org.KarthikKarhem.DarkSpell.Utils.profileProp;
+import static org.KarthikKarhem.DarkSpell.Utils.setProfile;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,16 +57,16 @@ public class MainActivity extends AppCompatActivity {
         final CardView card1 = (CardView) findViewById(R.id.card1);
         final CardView card2 = (CardView) findViewById(R.id.card2);
         final CardView card3 = (CardView) findViewById(R.id.card3);
-        final int balColor = ContextCompat.getColor(this, R.color.colorBalance);
-        final int perColor = ContextCompat.getColor(this, R.color.colorPerformance);
+        final int balColor = ContextCompat.getColor(this, R.color.colorBalanced);
+        final int perColor = ContextCompat.getColor(this, R.color.colorStock);
         final int batColor = ContextCompat.getColor(this, R.color.colorBattery);
         final int gamColor = ContextCompat.getColor(this, R.color.colorGaming);
 
-        // Check for Spectrum Support
+        // Check for DarkSpell Support
         if (!checkSupport(this)) {
             new AlertDialog.Builder(this)
-                    .setTitle(getString(R.string.no_spectrum_support_dialog_title))
-                    .setMessage(getString(R.string.no_spectrum_support_dialog_message))
+                    .setTitle(getString(R.string.no_darkspell_support_dialog_title))
+                    .setMessage(getString(R.string.no_darkspell_support_dialog_message))
                     .setCancelable(false)
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
@@ -106,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
         String[] profilesToDisable = disabledProfiles.split(",");
         for (String profile : profilesToDisable){
             switch (profile) {
-                case "balance":
+                case "balanced":
                     card0.setVisibility(View.GONE);
                     break;
-                case "performance":
+                case "stock":
                     card1.setVisibility(View.GONE);
                     break;
                 case "battery":
@@ -196,17 +196,17 @@ public class MainActivity extends AppCompatActivity {
                 // Default KPM value, just in case
             } else if (result.contains("0")) {
                 CardView card0 = (CardView) findViewById(R.id.card0);
-                int balColor = ContextCompat.getColor(this, R.color.colorBalance);
+                int balColor = ContextCompat.getColor(this, R.color.colorBalanced);
                 card0.setCardBackgroundColor(balColor);
                 oldCard = card0;
                 editor.putString("profile", "balanced");
                 editor.apply();
             } else if (result.contains("1")) {
                 CardView card1 = (CardView) findViewById(R.id.card1);
-                int perColor = ContextCompat.getColor(this, R.color.colorPerformance);
+                int perColor = ContextCompat.getColor(this, R.color.colorStock);
                 card1.setCardBackgroundColor(perColor);
                 oldCard = card1;
-                editor.putString("profile", "performance");
+                editor.putString("profile", "stock");
                 editor.apply();
             } else if (result.contains("2")) {
                 CardView card2 = (CardView) findViewById(R.id.card2);
@@ -247,12 +247,12 @@ public class MainActivity extends AppCompatActivity {
         if (kernel.isEmpty())
             return;
         balDesc = desc0.getText().toString();
-        balDesc = balDesc.replaceAll("\\bElectron\\b", kernel);
+        balDesc = balDesc.replaceAll("\\bDarkMAgic\\b", kernel);
         desc0.setText(balDesc);
 
         if (Utils.supportsCustomDesc()){
-            if(!Objects.equals(getCustomDesc("balance"), "fail")) desc0.setText(getCustomDesc("balance"));
-            if(!Objects.equals(getCustomDesc("performance"), "fail")) desc1.setText(getCustomDesc("performance"));
+            if(!Objects.equals(getCustomDesc("balanced"), "fail")) desc0.setText(getCustomDesc("balanced"));
+            if(!Objects.equals(getCustomDesc("stock"), "fail")) desc1.setText(getCustomDesc("stock"));
             if(!Objects.equals(getCustomDesc("battery"), "fail")) desc2.setText(getCustomDesc("battery"));
             if(!Objects.equals(getCustomDesc("gaming"), "fail")) desc3.setText(getCustomDesc("gaming"));
         }
