@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/KarthikKarhem//master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="70" height="70" /> DarkSpell
+# <img src="https://raw.githubusercontent.com/KarthikKarhem/darkspell/app/src/main/res/drawable-xxxhdpi/ic_launcher.png" width="70" height="70" /> DarkSpell
 A simple, user-friendly and profile based Kernel Manager, inspired from Spectrum!
 
 ## How to add DarkSpell support to your kernel
