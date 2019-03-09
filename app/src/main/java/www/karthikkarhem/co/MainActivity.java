@@ -1,4 +1,4 @@
-package org.KarthikKarhem.DarkSpell;
+package www.karthikkarhem.co;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -26,19 +26,19 @@ import java.util.Objects;
 
 import eu.chainfire.libsuperuser.Shell;
 
-import static org.KarthikKarhem.DarkSpell.Utils.KPM;
-import static org.KarthikKarhem.DarkSpell.Utils.checkSupport;
-import static org.KarthikKarhem.DarkSpell.Utils.cpuScalingGovernorPath;
-import static org.KarthikKarhem.DarkSpell.Utils.finalGov;
-import static org.KarthikKarhem.DarkSpell.Utils.getCustomDesc;
-import static org.KarthikKarhem.DarkSpell.Utils.kernelProp;
-import static org.KarthikKarhem.DarkSpell.Utils.kpmFinal;
-import static org.KarthikKarhem.DarkSpell.Utils.kpmPath;
-import static org.KarthikKarhem.DarkSpell.Utils.kpmPropPath;
-import static org.KarthikKarhem.DarkSpell.Utils.listToString;
-import static org.KarthikKarhem.DarkSpell.Utils.notTunedGov;
-import static org.KarthikKarhem.DarkSpell.Utils.profileProp;
-import static org.KarthikKarhem.DarkSpell.Utils.setProfile;
+import static www.karthikkarhem.co.Utils.KPM;
+import static www.karthikkarhem.co.Utils.checkSupport;
+import static www.karthikkarhem.co.Utils.cpuScalingGovernorPath;
+import static www.karthikkarhem.co.Utils.finalGov;
+import static www.karthikkarhem.co.Utils.getCustomDesc;
+import static www.karthikkarhem.co.Utils.kernelProp;
+import static www.karthikkarhem.co.Utils.kpmFinal;
+import static www.karthikkarhem.co.Utils.kpmPath;
+import static www.karthikkarhem.co.Utils.kpmPropPath;
+import static www.karthikkarhem.co.Utils.listToString;
+import static www.karthikkarhem.co.Utils.notTunedGov;
+import static www.karthikkarhem.co.Utils.profileProp;
+import static www.karthikkarhem.co.Utils.setProfile;
 
 public class MainActivity extends AppCompatActivity {
 

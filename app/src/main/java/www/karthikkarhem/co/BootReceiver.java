@@ -1,4 +1,4 @@
-package org.KarthikKarhem.DarkSpell;
+package www.karthikkarhem.co;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package org.KarthikKarhem.DarkSpell;
+package www.karthikkarhem.co;
 
 import org.junit.Test;
 

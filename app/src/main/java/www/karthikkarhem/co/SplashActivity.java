@@ -1,4 +1,4 @@
-package org.KarthikKarhem.DarkSpell;
+package www.karthikkarhem.co;
 
 import android.app.Activity;
 import android.content.Intent;

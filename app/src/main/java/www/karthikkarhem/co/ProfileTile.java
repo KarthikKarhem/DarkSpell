@@ -1,4 +1,4 @@
-package org.KarthikKarhem.DarkSpell;
+package www.karthikkarhem.co;
 
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class ProfileTile extends TileService {
 
     private static final String SERVICE_STATUS_FLAG = "serviceStatus";
-    private static final String PREFERENCES_KEY = "org.KarthikKarhem.DarkSpell";
+    private static final String PREFERENCES_KEY = "www.karthikkarhem.co";
     private boolean click = false;
 
     @Override
